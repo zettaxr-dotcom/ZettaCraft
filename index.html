@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codename : Zetta</title>
-
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
-  <!-- BACKGROUND BLUR -->
-  <div class="bg"></div>
+  <!-- VIDEO BACKGROUND -->
+  <video class="bg" autoplay muted loop playsinline>
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
+  <!-- MUSIC -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- PARTICLE -->
+  <div class="leaves"></div>
 
   <!-- CONTAINER -->
   <main class="container">
@@ -40,7 +34,7 @@
       🌎 Bedrock
     </a>
 
-<a href="https://linktr.ee/Zettarealms" class="btn">
+    <a href="https://linktr.ee/Zettarealms" class="btn">
       🌳 Linktree
     </a>
 
@@ -55,6 +49,7 @@
     <a href="https://www.tiktok.com/@zetta.xr?_r=1&_t=ZS-96N0pVPzRXY" class="btn">
       🔗 Tik Tok
     </a>
+
     <!-- FOOTER -->
     <footer>
       <p>Codename : Zetta 👑</p>
@@ -62,5 +57,39 @@
 
   </main>
 
+  <script>
+    const leavesContainer = document.querySelector('.leaves');
+
+    function createLeaf() {
+
+      const leaf = document.createElement('div');
+
+      leaf.classList.add('leaf');
+
+      const particles = ['🍃','🍂'];
+
+      leaf.innerHTML =
+        particles[Math.floor(Math.random() * particles.length)];
+
+      leaf.style.left =
+        Math.random() * window.innerWidth + 'px';
+
+      leaf.style.animationDuration =
+        (Math.random() * 6 + 8) + 's';
+
+      leaf.style.fontSize =
+        (Math.random() * 18 + 14) + 'px';
+
+      leaf.style.opacity = Math.random();
+
+      leavesContainer.appendChild(leaf);
+
+      setTimeout(() => {
+        leaf.remove();
+      }, 14000);
+    }
+
+    setInterval(createLeaf, 500);
+  </script>
+
 </body>
-</html>
