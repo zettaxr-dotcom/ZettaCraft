@@ -16,27 +16,24 @@
 
 <body>
 
-  <!-- VIDEO BACKGROUND (DIEMIN AUDIO NYA) -->
+  <!-- 🎬 BACKGROUND VIDEO -->
   <video class="bg" autoplay muted loop playsinline>
     <source src="background.mp4" type="video/mp4">
   </video>
 
-  <!-- 🎵 MUSIC ONLY MP3 -->
-  <audio id="bgm" autoplay loop>
+  <!-- 🎵 MUSIC -->
+  <audio id="bgm" loop>
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- 🔊 CLICK SFX -->
+  <!-- 🔊 CLICK SOUND -->
   <audio id="clickSfx">
     <source src="click.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- 🌌 PARTICLE -->
-  <div class="particles"></div>
-
   <main class="container">
 
-    <img src="profile.png" alt="Profile" class="profile-img">
+    <img src="profile.png" class="profile-img" alt="Profile">
 
     <h1>Codename : Zetta</h1>
 
@@ -44,30 +41,12 @@
       Download Modpack, Shader, Texture Pack For Java & Bedrock
     </p>
 
-    <!-- BUTTONS (SEMUA ADA SFX) -->
-    <a href="https://zettaxr-dotcom.github.io/ZettaJava/" class="btn click">
-      🌌 Java
-    </a>
-
-    <a href="#" class="btn click">
-      🌎 Bedrock
-    </a>
-
-    <a href="https://linktr.ee/Zettarealms" class="btn click">
-      🌳 Linktree
-    </a>
-
-    <a href="https://youtube.com/@zettaxr?si=PUA5OJtLotW2Kcby" class="btn click">
-      📌 Youtube
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029Vb7WE39GzzKOH94qKL2l" class="btn click">
-      🏛️ Saluran Wa
-    </a>
-
-    <a href="https://www.tiktok.com/@zetta.xr?_r=1&_t=ZS-96N0pVPzRXY" class="btn click">
-      🔗 Tik Tok
-    </a>
+    <a href="https://zettaxr-dotcom.github.io/ZettaJava/" class="btn click">🌌 Java</a>
+    <a href="#" class="btn click">🌎 Bedrock</a>
+    <a href="https://linktr.ee/Zettarealms" class="btn click">🌳 Linktree</a>
+    <a href="https://youtube.com/@zettaxr?si=PUA5OJtLotW2Kcby" class="btn click">📌 Youtube</a>
+    <a href="https://whatsapp.com/channel/0029Vb7WE39GzzKOH94qKL2l" class="btn click">🏛️ Saluran Wa</a>
+    <a href="https://www.tiktok.com/@zetta.xr?_r=1&_t=ZS-96N0pVPzRXY" class="btn click">🔗 Tik Tok</a>
 
     <footer>
       <p>Codename : Zetta 👑</p>
@@ -75,15 +54,15 @@
 
   </main>
 
-  <!-- SCRIPT -->
   <script>
-    /* 🎵 auto play fix (biar gak silent bug) */
+    // 🎧 MUSIC START ON CLICK (anti block browser)
     const bgm = document.getElementById("bgm");
     document.body.addEventListener("click", () => {
+      bgm.volume = 0.5;
       bgm.play();
     }, { once: true });
 
-    /* 🔊 CLICK SOUND */
+    // 🔊 CLICK SFX
     const clickSfx = document.getElementById("clickSfx");
 
     document.querySelectorAll(".click").forEach(el => {
@@ -92,28 +71,6 @@
         clickSfx.play();
       });
     });
-
-    /* 🌧️🌎🌌 PARTICLE SYSTEM */
-    const container = document.querySelector(".particles");
-
-    function spawnParticle() {
-      const p = document.createElement("div");
-      p.classList.add("particle");
-
-      const items = ["🌧️", "🌎", "🌌"];
-      p.innerHTML = items[Math.floor(Math.random() * items.length)];
-
-      p.style.left = Math.random() * window.innerWidth + "px";
-      p.style.fontSize = (Math.random() * 18 + 14) + "px";
-      p.style.animationDuration = (Math.random() * 6 + 6) + "s";
-      p.style.opacity = Math.random();
-
-      container.appendChild(p);
-
-      setTimeout(() => p.remove(), 12000);
-    }
-
-    setInterval(spawnParticle, 400);
   </script>
 
 </body>
