@@ -1,86 +1,87 @@
 /* RESET */
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 /* BODY */
 body{
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  background: #111;
-  overflow: hidden;
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  overflow:hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+
+  background:black;
 }
 
 /* VIDEO BACKGROUND */
 .bg{
-  position: fixed;
-  top: 0;
-  left: 0;
+  position:fixed;
 
-  width: 100%;
-  height: 100%;
+  top:0;
+  left:0;
 
-  object-fit: cover;
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:-2;
 
   filter:
     blur(6px)
-    brightness(0.45);
+    brightness(0.35);
 
-  transform: scale(1.1);
+  transform:scale(1.1);
 
-  z-index: -2;
-
-  animation: zoomBg 20s ease-in-out infinite alternate;
+  animation:zoomBg 20s ease-in-out infinite alternate;
 }
 
 /* BACKGROUND ANIMATION */
 @keyframes zoomBg{
   0%{
-    transform: scale(1.1);
+    transform:scale(1.1);
   }
 
   100%{
-    transform: scale(1.18);
+    transform:scale(1.18);
   }
 }
 
 /* PARTICLE CONTAINER */
 .leaves{
-  position: fixed;
+  position:fixed;
 
-  top: 0;
-  left: 0;
+  top:0;
+  left:0;
 
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  pointer-events: none;
+  pointer-events:none;
 
-  z-index: 1;
+  z-index:1;
 }
 
 /* LEAF */
 .leaf{
-  position: absolute;
+  position:absolute;
 
-  top: -10%;
+  top:-10%;
 
-  font-size: 20px;
+  font-size:20px;
 
-  opacity: 0.7;
+  opacity:0.7;
 
-  animation: fall linear forwards;
-
-  filter: blur(0.3px);
+  animation:fall linear forwards;
 }
 
 /* LEAF ANIMATION */
@@ -102,24 +103,23 @@ body{
 
 /* CONTAINER */
 .container{
-  position: relative;
-  z-index: 2;
+  position:relative;
+  z-index:2;
 
-  width: 90%;
-  max-width: 420px;
+  width:90%;
+  max-width:420px;
 
-  padding: 35px 25px;
+  padding:35px 25px;
 
-  border-radius: 28px;
+  border-radius:28px;
 
-  background: rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.08);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter:blur(18px);
 
-  border: 1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.12);
 
-  text-align: center;
+  text-align:center;
 
   box-shadow:
     0 0 25px rgba(0,0,0,0.4),
@@ -128,61 +128,61 @@ body{
 
 /* PROFILE */
 .profile-img{
-  width: 110px;
-  height: 110px;
+  width:110px;
+  height:110px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  border: 3px solid rgba(255,255,255,0.15);
+  border:3px solid rgba(255,255,255,0.15);
 
-  margin-bottom: 18px;
+  margin-bottom:18px;
 }
 
 /* TITLE */
 h1{
-  font-size: 30px;
-  font-weight: 700;
+  font-size:30px;
+  font-weight:700;
 
-  margin-bottom: 10px;
+  margin-bottom:10px;
 }
 
 /* DESCRIPTION */
 .desc{
-  font-size: 14px;
-  color: #d1d1d1;
+  font-size:14px;
+  color:#d1d1d1;
 
-  margin-bottom: 28px;
+  margin-bottom:28px;
 }
 
 /* BUTTON */
 .btn{
-  display: block;
+  display:block;
 
-  text-decoration: none;
-  color: white;
+  text-decoration:none;
+  color:white;
 
-  background: rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.08);
 
-  padding: 15px;
+  padding:15px;
 
-  margin-bottom: 16px;
+  margin-bottom:16px;
 
-  border-radius: 18px;
+  border-radius:18px;
 
-  font-weight: 600;
+  font-weight:600;
 
-  border: 1px solid rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.1);
 
-  transition: 0.25s ease;
+  transition:0.25s ease;
 }
 
-/* HOVER */
+/* BUTTON HOVER */
 .btn:hover{
-  transform: translateY(-4px) scale(1.02);
+  transform:translateY(-4px) scale(1.02);
 
-  background: rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.14);
 
   box-shadow:
     0 10px 20px rgba(0,0,0,0.35);
@@ -190,10 +190,10 @@ h1{
 
 /* FOOTER */
 footer{
-  margin-top: 18px;
+  margin-top:18px;
 }
 
 footer p{
-  color: #aaa;
-  font-size: 13px;
+  color:#aaa;
+  font-size:13px;
 }
