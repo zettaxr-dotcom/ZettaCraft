@@ -16,14 +16,12 @@ body{
   align-items:center;
 
   color:white;
-
   background:black;
 }
 
 /* VIDEO BACKGROUND */
 .bg{
   position:fixed;
-
   top:0;
   left:0;
 
@@ -31,13 +29,9 @@ body{
   height:100%;
 
   object-fit:cover;
-
   z-index:-2;
 
-  filter:
-    blur(6px)
-    brightness(0.35);
-
+  filter:blur(6px) brightness(0.35);
   transform:scale(1.1);
 
   animation:zoomBg 20s ease-in-out infinite alternate;
@@ -45,19 +39,13 @@ body{
 
 /* BACKGROUND ANIMATION */
 @keyframes zoomBg{
-  0%{
-    transform:scale(1.1);
-  }
-
-  100%{
-    transform:scale(1.18);
-  }
+  0%{ transform:scale(1.1); }
+  100%{ transform:scale(1.18); }
 }
 
-/* PARTICLE CONTAINER */
-.leaves{
+/* 🌌 PARTICLE CONTAINER (UPDATED) */
+.particles{
   position:fixed;
-
   top:0;
   left:0;
 
@@ -65,40 +53,26 @@ body{
   height:100%;
 
   overflow:hidden;
-
   pointer-events:none;
 
   z-index:1;
 }
 
-/* LEAF */
-.leaf{
+/* 🌧️🌎🌌 PARTICLE */
+.particle{
   position:absolute;
-
-  top:-10%;
+  top:0;
+  left:0;
 
   font-size:20px;
+  opacity:0.8;
 
-  opacity:0.7;
+  user-select:none;
+  pointer-events:none;
 
-  animation:fall linear forwards;
-}
+  will-change:transform;
 
-/* LEAF ANIMATION */
-@keyframes fall{
-  0%{
-    transform:
-      translateY(-10vh)
-      translateX(0px)
-      rotate(0deg);
-  }
-
-  100%{
-    transform:
-      translateY(120vh)
-      translateX(80px)
-      rotate(360deg);
-  }
+  transition:opacity 0.3s ease;
 }
 
 /* CONTAINER */
@@ -114,7 +88,6 @@ body{
   border-radius:28px;
 
   background:rgba(255,255,255,0.08);
-
   backdrop-filter:blur(18px);
 
   border:1px solid rgba(255,255,255,0.12);
@@ -132,7 +105,6 @@ body{
   height:110px;
 
   border-radius:50%;
-
   object-fit:cover;
 
   border:3px solid rgba(255,255,255,0.15);
@@ -144,7 +116,6 @@ body{
 h1{
   font-size:30px;
   font-weight:700;
-
   margin-bottom:10px;
 }
 
@@ -152,21 +123,19 @@ h1{
 .desc{
   font-size:14px;
   color:#d1d1d1;
-
   margin-bottom:28px;
 }
 
 /* BUTTON */
 .btn{
   display:block;
-
   text-decoration:none;
+
   color:white;
 
   background:rgba(255,255,255,0.08);
 
   padding:15px;
-
   margin-bottom:16px;
 
   border-radius:18px;
@@ -184,8 +153,12 @@ h1{
 
   background:rgba(255,255,255,0.14);
 
-  box-shadow:
-    0 10px 20px rgba(0,0,0,0.35);
+  box-shadow:0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* CLICK FEEL (biar SFX + anim sinkron) */
+.btn:active{
+  transform:scale(0.96);
 }
 
 /* FOOTER */
