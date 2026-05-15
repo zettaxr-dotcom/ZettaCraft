@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Codename : Zetta</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
   <!-- VIDEO BACKGROUND -->
@@ -19,33 +37,40 @@
     <!-- PROFILE -->
     <img src="profile.png" alt="Profile" class="profile-img">
 
+    <!-- TITLE -->
     <h1>Codename : Zetta</h1>
 
+    <!-- DESCRIPTION -->
     <p class="desc">
       Download Modpack, Shader, Texture Pack For Java & Bedrock
     </p>
 
-    <!-- BUTTONS -->
+    <!-- BUTTON -->
     <a href="https://zettaxr-dotcom.github.io/ZettaJava/" class="btn">
       🌌 Java
     </a>
 
+    <!-- BUTTON -->
     <a href="#" class="btn">
       🌎 Bedrock
     </a>
 
+    <!-- BUTTON -->
     <a href="https://linktr.ee/Zettarealms" class="btn">
       🌳 Linktree
     </a>
 
+    <!-- BUTTON -->
     <a href="https://youtube.com/@zettaxr?si=PUA5OJtLotW2Kcby" class="btn">
       📌 Youtube
     </a>
 
+    <!-- BUTTON -->
     <a href="https://whatsapp.com/channel/0029Vb7WE39GzzKOH94qKL2l" class="btn">
       🏛️ Saluran Wa
     </a>
 
+    <!-- BUTTON -->
     <a href="https://www.tiktok.com/@zetta.xr?_r=1&_t=ZS-96N0pVPzRXY" class="btn">
       🔗 Tik Tok
     </a>
@@ -57,19 +82,25 @@
 
   </main>
 
+  <!-- PARTICLE SCRIPT -->
   <script>
-    const leavesContainer = document.querySelector('.leaves');
+    const leavesContainer =
+      document.querySelector('.leaves');
 
-    function createLeaf() {
+    function createLeaf(){
 
-      const leaf = document.createElement('div');
+      const leaf =
+        document.createElement('div');
 
       leaf.classList.add('leaf');
 
-      const particles = ['🍃','🍂'];
+      const particles =
+        ['🍃','🍂'];
 
       leaf.innerHTML =
-        particles[Math.floor(Math.random() * particles.length)];
+        particles[Math.floor(
+          Math.random() * particles.length
+        )];
 
       leaf.style.left =
         Math.random() * window.innerWidth + 'px';
@@ -80,7 +111,8 @@
       leaf.style.fontSize =
         (Math.random() * 18 + 14) + 'px';
 
-      leaf.style.opacity = Math.random();
+      leaf.style.opacity =
+        Math.random();
 
       leavesContainer.appendChild(leaf);
 
@@ -93,3 +125,4 @@
   </script>
 
 </body>
+</html>
